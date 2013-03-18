@@ -1,0 +1,633 @@
+/*
+Theme Name: Denver Virtual Office
+Theme URI: http://wordpress.org/
+Description: The 2010 theme for WordPress is stylish, customizable, simple, and readable -- make it yours with a custom menu, header image, and background. Twenty Ten supports six widgetized areas (two in the sidebar, four in the footer) and featured images (thumbnails for gallery posts and custom header images for posts and pages). It includes stylesheets for print and the admin Visual Editor, special styles for posts in the "Asides" and "Gallery" categories, and has an optional one-column page template that removes the sidebar.
+Author: the WordPress team
+Version: 1.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
+Text Domain: twentyten
+*/
+
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html,body                       { width:100%; height:100%; }
+body                            { padding:0; margin:0; font:10px Arial, sans-serif; background: url("../images/bg.png") repeat-x #fff; color:#7B7B7B; }
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
+    padding:0;
+    margin:0;
+    outline:none;
+    list-style:none;
+}
+select, input, textarea        { font-size:12px; vertical-align:middle; }
+textarea                       { vertical-align:top; }
+:focus                         { outline:none; }
+input[type=submit]             { cursor:pointer; }
+img, fieldset                  { border:0; }
+table                          { border-collapse:collapse; border-spacing:0; }
+a:link, a:visited              { font:12px Arial, sans-serif; color:#7B7B7B; text-decoration:underline; }
+a:hover                        { text-decoration:none; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r           	           { float:right !important; }
+.float-l                       { float:left !important; }
+.no-float                      { float:none !important; }
+.no-border                     { border:0 !important; }
+.no-bg                         { background:none !important; }
+.no-margin                     { margin:0 !important; }
+.no-padding                    { padding:0 !important; }
+.no-display                    { display:none !important; }
+.display                       { display:block !important; }
+.inline                        { display:inline !important; }
+.overflow                      { overflow:hidden !important; }
+.align-r                       { text-align:right !important; }
+.align-l                       { text-align:left !important; }
+.align-c                       { text-align:center !important; }
+.clear                         { clear:both; }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+#wrapper {
+    width: 1057px;
+    margin: 0 auto;
+    background: #fff;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HEADER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+#header {
+    position: relative;
+}
+#header h1 a {
+    font-size: 12px;
+    font-weight: normal;
+    padding: 27px 35px;
+    float: left;
+}
+#header h1 a img {
+    position: absolute;
+    left: 35px;
+    top: 27px;
+}
+#header .phone-nbr {
+    float: right;
+    font-size: 24px;
+    color: #1F93EB;
+    background: url("images/home/phone-bg.png") no-repeat left center;
+    padding: 10px 0 10px 26px;
+    margin: 36px 40px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------NAV------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+#header .navigation {
+    overflow: hidden;
+    padding: 50px 0 40px 196px;
+}
+#header .navigation li {
+    float: left;
+}
+#header .navigation li a {
+    text-decoration: none;
+    display: block;
+    padding: 0 12px;
+    font-size: 18px;
+    color: #000;
+    border-right: 1px solid #ccc;
+}
+#header .navigation li.current_page_item a,
+#header .navigation li a:hover {
+    color: #1B3492;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HOME-----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.content-wrap {
+    overflow: hidden;
+    width: 1057px;
+}
+.content-wrap .media a {
+    display: block;
+}
+.content-wrap .media .front {
+    float: left;
+}
+.content-wrap .media .front img {
+    margin: 0;
+}
+.content-wrap .media a {
+    overflow: hidden;
+}
+.content-wrap .media a img {
+    margin: 0 0 9px 15px;
+}
+.content-wrap .nav {
+    overflow: hidden;
+    clear: both;
+    border-bottom: 1px solid #D4D4D4;
+    margin: 0 38px;
+}
+.content-wrap .nav li {
+    float: left;
+    width: 212px;
+    margin: 20px 30px 20px 0;
+}
+.content-wrap .nav li a {
+    display: block;
+    text-decoration: none;
+}
+.content-wrap .nav li a strong {
+    font-size: 16px;
+    color: #000;
+}
+.content-wrap .nav li a .information {
+    display: block;
+    font-size: 10px;
+    color: #7B7B7B;
+    background: none;
+}
+.content-wrap .nav .mail a .wrap {
+    display: block;
+    background: url("images/home/sprite-nav.png") no-repeat ;
+    padding: 10px 0 10px 92px;
+}
+.content-wrap .nav .phone a .wrap {
+    display: block;
+    background: url("images/home/sprite-nav.png") no-repeat 0 -101px;
+    padding: 10px 0 10px 84px;
+}
+.content-wrap .nav .office a .wrap {
+    display: block;
+    background: url("images/home/sprite-nav.png") no-repeat 0 -205px;
+    padding: 10px 0 10px 77px;
+}
+.content-wrap .nav .conf-room {
+    width: 230px;
+    margin: 0;
+    padding: 20px 0;
+}
+.content-wrap .nav .conf-room a .wrap {
+    display: block;
+    background: url("images/home/sprite-nav.png") no-repeat 0 -301px;
+    padding: 10px 0 10px 86px;
+}
+.info {
+    overflow: hidden;
+    padding: 24px 38px;
+}
+.info h2 {
+    float: left;
+    width: 280px;
+    font-size: 20px;
+    font-weight: normal;
+    color: #000;
+    padding: 0 56px 0 0;
+}
+.info p {
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 19px;
+    color: #595959;
+}
+.offers {
+    /* height: 180px;*/
+    display: inline-block;
+    background: url("images/home/bot-bg.png") repeat-x;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 38px 44px 38px;
+    width: 982px;
+}
+.offers li {
+    float: left;
+    width: 316px;
+    height: 135px;
+    margin: 14px 0 0;
+}
+@font-face {
+    font-family: 'europe_extnormal';
+    src: url('europe_ext-webfont.eot');
+    src: url('europe_ext-webfont.eot?#iefix') format('embedded-opentype'),
+    url('europe_ext-webfont.woff') format('woff'),
+    url('europe_ext-webfont.ttf') format('truetype'),
+    url('europe_ext-webfont.svg#europe_extnormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.offers li h3 a {
+    display: block;
+    font: 26px "europe_extnormal", "Myriad Pro";
+    color: #000;
+    text-decoration: none;
+    text-align: right;
+}
+.offers .offer-1 {
+    background: url("images/home/img-1.png") no-repeat -32px center;
+}
+.offers .offer-1 h3 {
+    width: 184px;
+    float: right;
+}
+.offers .offer-2 {
+    position: relative;
+}
+.offers .offer-2 .over {
+    display: block;
+    position: absolute;
+    background: rgba( 222, 79, 41, 0.5);
+    width: 304px;
+    height: 141px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    left: 16px;
+    top: -22px;
+    z-index: 20;
+    padding: 25px 25px 0 0;
+}
+.offers .offer-2 .over h3 a {
+    text-align: center;
+    padding: 0 0 8px;
+}
+.offers .offer-2 .clock {
+    background: url("images/home/img-2.png") no-repeat left center;
+    display: block;
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    bottom: -28px;
+    left: 0;
+}
+.offers .offer-2 .over p {
+    width: 181px;
+    float: right;
+    text-align: right;
+    font-size: 17px;
+    color: #fff;
+}
+.offers .offer-3 {
+    position: relative;
+}
+.offers .offer-3 span {
+    background: url("images/home/img-3.png") no-repeat left center;
+    display: block;
+    width: 182px;
+    height: 140px;
+    position: absolute;
+    bottom: 0;
+    left: -38px;
+}
+.offers .offer-3 h3 {
+
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------SIDEBAR--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER-HOME----------------------------------*/
+/*----------------------------------------------------------------------------------*/
+#footer {
+    overflow: hidden;
+    padding: 0 38px;
+}
+#footer span {
+    font-size: 16px;
+    color: #585858;
+    font-weight: bold;
+    float: left;
+    padding: 5px 0 40px;
+}
+#footer .social {
+    overflow: hidden;
+    padding: 0 13px;
+    float: left;
+    border-right: 1px solid #ccc;
+}
+#footer .social li {
+    float: left;
+    padding: 0 12px 0 0;
+}
+#footer .social .twitter {
+    display: block;
+    width: 29px;
+    height: 29px;
+    background: url("images/home/sprite-social.png") no-repeat 0 0;
+}
+#footer .social .facebook {
+    display: block;
+    width: 30px;
+    height: 29px;
+    background: url("images/home/sprite-social.png") no-repeat 0 -49px;
+}
+#footer .social .rss {
+    display: block;
+    width: 29px;
+    height: 29px;
+    background: url("images/home/sprite-social.png") no-repeat 0 -96px;
+}
+#footer p {
+    overflow: hidden;
+    font-size: 14px;
+    color: #949494;
+    padding: 6px 0 0 26px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------ABOUT----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.content {
+    padding: 20px 38px 22px 0;
+}
+.content h2 {
+    font-size: 32px;
+    color: #3D4F95;
+    font-weight: normal;
+    padding: 0 0 20px;
+}
+.content p {
+    font-size: 14px;
+    color: #595959;
+    line-height: 19px;
+    padding: 0 0 22px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------SIDEBAR--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+#sidebar {
+    width: 290px;
+    float: left;
+    padding: 80px 38px 48px;
+}
+#sidebar .contacts {
+    overflow: hidden;
+}
+#sidebar .contacts li {
+    border: 1px solid #C2C2C2;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 17px;
+}
+#sidebar .contacts li strong {
+    font-size: 14px;
+    color: #7A7B7F;
+    font-weight: normal;
+}
+#sidebar .contacts li span {
+    font-size: 24px;
+    color: #3D4F95;
+}
+#sidebar .contacts li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #3D4F95;
+}
+#sidebar .contacts li a:hover {
+    text-decoration: underline;
+}
+#sidebar .contacts li .phone {
+    display: block;
+    background: url("images/about/sprite.png") no-repeat right 11px;
+}
+#sidebar .contacts li .skype {
+    display: block;
+    background: url("images/about/sprite.png") no-repeat right -48px;
+}
+#sidebar .contacts li .mail {
+    display: block;
+    background: url("images/about/sprite.png") no-repeat right -114px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------WORKS----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------CONTENT--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.content {
+    padding: 28px 38px 48px 0;
+}
+.content h2 {
+    font-size: 32px;
+    color: #3D4F95;
+    font-weight: normal;
+    padding: 0 0 20px;
+}
+.content p {
+    font-size: 14px;
+    color: #595959;
+    line-height: 19px;
+    padding: 0 0 22px;
+}
+.content p a {
+    text-decoration: none;
+    color: #3D4F95;
+    font-size: 14px;
+    line-height: 19px;
+}
+.content .suites {
+    overflow: hidden;
+    background: #FFF6D4;
+}
+.content .suites h3 {
+    font-size: 20px;
+    color: #5A5A5A;
+    padding: 20px 14px;
+}
+.content .suites .benefits {
+    padding: 0 44px;
+}
+.content .suites .benefits li {
+    list-style: disc outside;
+    color: #5A5A5A;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 0 0 10px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------SIDEBAR--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+#sidebar-works {
+    width: 290px;
+    float: left;
+    padding: 28px 38px 48px;
+}
+#sidebar-works .contacts {
+    overflow: hidden;
+}
+#sidebar-works .contacts li {
+    border: 1px solid #C2C2C2;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding: 17px;
+}
+#sidebar-works .contacts li strong {
+    font-size: 14px;
+    color: #7A7B7F;
+    font-weight: normal;
+}
+#sidebar-works .contacts li span {
+    font-size: 24px;
+    color: #3D4F95;
+}
+#sidebar-works .contacts li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #3D4F95;
+}
+#sidebar-works .contacts li a:hover {
+    text-decoration: underline;
+}
+#sidebar-works .contacts li .phone {
+    display: block;
+    background: url("images/works/sprite.png") no-repeat right 11px;
+}
+#sidebar-works .contacts li .skype {
+    display: block;
+    background: url("images/works/sprite.png") no-repeat right -48px;
+}
+#sidebar-works .contacts li .mail {
+    display: block;
+    background: url("images/works/sprite.png") no-repeat right -114px;
+}
+#sidebar-works .nav {
+    overflow: hidden;
+    clear: both;
+    margin: 0 10px;
+}
+#sidebar-works .nav li {
+    width: 212px;
+    padding: 14px 30px 14px 0;
+    border-bottom: 1px solid #D4D4D4;
+}
+#sidebar-works .nav li a {
+    display: block;
+    text-decoration: none;
+}
+#sidebar-works .nav li a strong {
+    font-size: 16px;
+    color: #000;
+}
+#sidebar-works .nav li a .information {
+    display: block;
+    font-size: 10px;
+    color: #7B7B7B;
+    background: none;
+}
+#sidebar-works .nav .mail a .wrap {
+    display: block;
+    background: url("images/works/sprite-nav.png") no-repeat ;
+    padding: 10px 0 10px 92px;
+}
+#sidebar-works .nav .phone a .wrap {
+    display: block;
+    background: url("images/works/sprite-nav.png") no-repeat 0 -101px;
+    padding: 10px 0 10px 84px;
+}
+#sidebar-works .nav .office a .wrap {
+    display: block;
+    background: url("images/works/sprite-nav.png") no-repeat 0 -205px;
+    padding: 10px 0 10px 77px;
+}
+#sidebar-works .nav .conf-room {
+    width: 230px;
+    margin: 0;
+    padding: 20px 0;
+}
+#sidebar-works .nav .conf-room a .wrap {
+    display: block;
+    background: url("images/works/sprite-nav.png") no-repeat 0 -301px;
+    padding: 10px 0 10px 86px;
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.footer-wrap #footer {
+    overflow: hidden;
+    margin: 0 38px;
+    clear: both;
+    border-top: 1px solid #D4D4D4;
+    padding: 38px 0 0;
+}
+.footer-wrap #footer span {
+    font-size: 16px;
+    color: #585858;
+    font-weight: bold;
+    float: left;
+    padding: 5px 0 40px;
+}
+.footer-wrap #footer .social {
+    overflow: hidden;
+    padding: 0 13px;
+    float: left;
+    border: none;
+}
+.footer-wrap #footer .social li {
+    float: left;
+    padding: 0 12px 0 0;
+}
+.footer-wrap #footer .social .twitter {
+    display: block;
+    width: 29px;
+    height: 29px;
+    background: url("images/works/sprite-social.png") no-repeat 0 0;
+}
+.footer-wrap #footer .social .facebook {
+    display: block;
+    width: 30px;
+    height: 29px;
+    background: url("images/works/sprite-social.png") no-repeat 0 -49px;
+}
+.footer-wrap #footer .social .rss {
+    display: block;
+    width: 29px;
+    height: 29px;
+    background: url("images/works/sprite-social.png") no-repeat 0 -96px;
+}
+.footer-wrap #footer .categories {
+    overflow: hidden;
+    padding: 0 0 30px 55px;
+}
+.footer-wrap #footer .categories li {
+    float: left;
+    padding: 0 0 0 30px;
+}
+.footer-wrap #footer .categories li h3 {
+    font-size: 12px;
+    color: #000;
+    padding: 0 0 11px;
+}
+.footer-wrap #footer .categories li .subjects {
+    overflow: hidden;
+}
+.footer-wrap #footer .categories li .subjects li {
+    float: none;
+    padding: 0 0 5px;
+}
+.footer-wrap #footer .categories li .subjects li a {
+    text-decoration: none;
+    color: #359BCB;
+}
+.footer-wrap #footer .copyright {
+    float: right;
+    font-size: 12px;
+    color: #838383;
+    font-weight: normal;
+    padding: 0;
+}
